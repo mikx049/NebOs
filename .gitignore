@@ -1,0 +1,5 @@
+**/build
+**/esp
+**/.ccls-cache
+**/compile_commands.json
+**/**.fd
