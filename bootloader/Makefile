@@ -17,6 +17,7 @@ EFI_LDS := $(EFI_LIB_DIR)/elf_x86_64_efi.lds
 CFLAGS := \
 	-I$(EFI_INCLUDE) \
 	-I$(EFI_INCLUDE)/x86_64 \
+	-I. \
 	-DEFI_FUNCTION_WRAPPER \
 	-std=c11 \
 	-ffreestanding \
@@ -54,7 +55,10 @@ OBJCOPY_FLAGS := \
 	-j .areloc \
 	-j .reloc
 
-.PHONY: all clean
+SRCS := $(wildcard *.c) $(wildcard */*.c)
+OBJS := $(patsubst %.c, $(BUILD_DIR)/%.o, $(SRCS))
+
+.PHONY: all
 
 all: $(EFI_FILE)
 
@@ -63,15 +67,14 @@ $(EFI_FILE): $(ELF_FILE)
 		-O efi-app-x86_64 \
 		$< $@
 
-$(ELF_FILE): $(BUILD_DIR)/main.o
+$(ELF_FILE): $(OBJS)
 	$(LD) $(LDFLAGS) \
 		$(EFI_CRT) \
-		$< \
+		$(OBJS) \
 		-lefi \
 		-lgnuefi \
 		-o $@
 
-$(BUILD_DIR)/main.o: main.c
-	mkdir -p $(BUILD_DIR)
+$(BUILD_DIR)/%.o: %.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
-

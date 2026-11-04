@@ -22,9 +22,7 @@ BEAR_EXISTS := $(shell command -v bear 2> /dev/null)
 
 clean:
 	rm -rf $(BUILD_DIR)/*
-	rm -f compile_commands.json
 	rm -f bootloader/compile_commands.json
-	@if [ -d kernel ]; then rm -f kernel/compile_commands.json; fi
 
 # ==========================================
 # Bootloader

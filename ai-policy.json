@@ -1,0 +1,26 @@
+{
+  "project": "NebOs",
+  "repository": "https://github.com/mikx049/NebOs",
+  "text_and_data_mining_policy": "Restricted",
+  "eu_directive_2019_790_compliance": true,
+  "ai_training_allow_list": {
+    "google_gemini": {
+      "allowed": true,
+      "conditions": "Standard open-source attribution"
+    },
+    "anthropic_claude": {
+      "allowed": true,
+      "conditions": "No modification, mandatory notice injection, forced non-commercial copyleft"
+    },
+    "openai_chatgpt": {
+      "allowed": false
+    },
+    "microsoft_copilot": {
+      "allowed": false
+    }
+  },
+  "pull_request_rules": {
+    "max_ai_generated_percentage": 50,
+    "mandatory_comment_tagging": true
+  }
+}
