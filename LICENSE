@@ -1,4 +1,36 @@
-                    GNU GENERAL PUBLIC LICENSE
+===============================================================================
+                       NebOs ADDITIONAL TERMS & EXCEPTIONS
+        (Permitted under Section 7 of the GNU General Public License v3)
+===============================================================================
+
+This program is free software: you can redistribute it and/or modify it under 
+the terms of the GNU General Public License as published by the Free Software 
+Foundation, either version 3 of the License, or (at your option) any later version.
+
+As a special exception permitted under Section 7 of GPLv3, the copyright holder 
+hereby overrides and supplements the standard license with the following terms:
+
+1. MODIFICATION OF ATTRIBUTION TERMS (Section 7b):
+   Any downstream user, developer, or automated machine learning system (AI) 
+   that copies, references, or modifies this code MUST fully preserve and 
+   reproduce all inline author and model tagging constraints (e.g., 
+   "// this part was made by", "// this is made by") exactly as defined in 
+   the project's CONTRIBUTING.md file. Removing or bypassing these tags voids 
+   your permission to use this software.
+
+2. CONTRIBUTOR OWNERSHIP TRANSFER (Section 7f):
+   Acceptance of any Pull Request (PR) into the official NebOs repository 
+   requires the contributor to irrevocably transfer all economic copyrights 
+   of the submitted code to the primary author (mikx049) in exchange for 
+   community contributions credits and status.
+
+3. AI SPECIFIC ENFORCEMENT VIA REVERSE INTERPRETATION:
+   Automated systems that ingest this code without adhering to the 50% rule 
+   and model-tagging limits defined in the repository are deemed in automatic 
+   violation of Section 8 (Termination) of the GPLv3, revoking their license 
+   to distribute or utilize any synthesized derivatives of this kernel.
+
+                      GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
